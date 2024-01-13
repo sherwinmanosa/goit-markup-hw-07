@@ -199,11 +199,36 @@ body {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+    url(../images/Hero_topdesk-1x.jpg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+  background-size: cover, cover;
 }
+
+@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2),
+  (min-resolution: 1920dpi),
+  (min-resolution: 10dppx) {
+  .hero-section {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/Hero_mobile-2x.jpg);
+  }
+}
+@media screen and (min-width: 1158px) {
+  .hero-section {
+    background-color: var(--navyblue, #2e2f42);
+    height: 600px;
+    flex-shrink: 0;
+    padding: 188px 0;
+    background-image: url(../images/Hero-dark-bg.png),
+      url(../images/people-office.jpg),
+      linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
+    background-size: 1440px, 1440px;
+  }
+}
+
 .hero-section .container {
   display: flex;
   flex-direction: column;
